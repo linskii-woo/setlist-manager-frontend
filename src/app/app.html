@@ -1,8 +1,12 @@
-<app-header></app-header>
-<nav>
-  <ul>
-    <li><a routerLink="/songs">Alle Songs</a></li>
-    <li><a routerLink="/add">Song hinzufügen</a></li>
-  </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+<a class="navbar-brand" routerLink="/">🎼 Setlist Manager</a>    <div class="navbar-nav">
+      <a class="nav-link" routerLink="/songs">Alle Songs</a>
+      <a class="nav-link" routerLink="/add">Song hinzufügen</a>
+    </div>
+  </div>
 </nav>
-<router-outlet />
+
+<div class="container mt-4">
+  <router-outlet />
+</div>
