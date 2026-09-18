@@ -1,1 +1,24 @@
-<p>song-list works!</p>
+<h2>Alle Songs</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Song</th>
+      <th>Künstler</th>
+      <th>Status</th>
+      <th>Aktion</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (song of songs; track $index) {
+      <tr>
+        <td>{{ song.title }}</td>
+        <td>{{ song.artist }}</td>
+        <td>{{ song.status }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm">Löschen</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

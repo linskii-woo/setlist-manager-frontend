@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-song-list',
-  styleUrl: './song-list.css',
+  imports: [],
   templateUrl: './song-list.html',
+  styleUrl: './song-list.css'
 })
-export class SongList {}
+export class SongList {
+  songs = [
+    { title: 'Song 1', artist: 'Künstler 1', status: 'Bereit' },
+    { title: 'Song 2', artist: 'Künstler 2', status: 'In Arbeit' },
+    { title: 'Song 3', artist: 'Künstler 3', status: 'Neu' }
+];
+}
