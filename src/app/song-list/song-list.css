@@ -1,0 +1,18 @@
+.btn-lila {
+  background-color:rgba(147, 112, 216, 0.863);
+  color:white;
+  border:none;
+}
+.btn-lila:hover {
+  background-color:rgb(142, 108, 210);
+  color:white;
+}
+.btn-loeschen {
+  background-color:rgba(152, 0, 0, 0.684);
+  color:white;
+  border:none;
+}
+.btn-loeschen:hover {
+    background-color:rgba(132, 0, 0, 0.734);
+    color:white;
+}
