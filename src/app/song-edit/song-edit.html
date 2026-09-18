@@ -1,1 +1,23 @@
-<p>song-edit works!</p>
+<h2>Song bearbeiten</h2>
+
+<form>
+  <div class="mb-3">
+    <label>Songname:</label>
+    <input type="text" class="form-control" value="{{ song.title }}">
+  </div>
+  <div class="mb-3">
+    <label>Künstler:</label>
+    <input type="text" class="form-control" value="{{ song.artist }}">
+  </div>
+  <div class="mb-3">
+    <label>Status:</label>
+    <select class="form-control">
+      <option value="Neu">Neu</option>
+      <option value="In Arbeit">In Arbeit</option>
+      <option value="Bereit">Bereit</option>
+    </select>
+  </div>
+  <button type="button" class="btn btn-success" (click)="updateSong()">
+    Song speichern
+  </button>
+</form>
