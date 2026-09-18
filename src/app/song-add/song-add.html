@@ -1,1 +1,23 @@
-<p>song-add works!</p>
+<h2>Song hinzufügen</h2>
+
+<form>
+  <div class="mb-3">
+    <label>Songname:</label>
+    <input type="text" class="form-control" placeholder="Songname eingeben">
+  </div>
+  <div class="mb-3">
+    <label>Künstler:</label>
+    <input type="text" class="form-control" placeholder="Künstler eingeben">
+  </div>
+  <div class="mb-3">
+    <label>Status:</label>
+    <select class="form-control">
+      <option value="Neu">Neu</option>
+      <option value="In Arbeit">In Arbeit</option>
+      <option value="Bereit">Bereit</option>
+    </select>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="addSong()">
+    Song hinzufügen
+  </button>
+</form>

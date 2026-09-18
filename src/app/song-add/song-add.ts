@@ -1,9 +1,19 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-song-add',
-  styleUrl: './song-add.css',
+  imports: [],
   templateUrl: './song-add.html',
+  styleUrl: './song-add.css'
 })
-export class SongAdd {}
+export class SongAdd {
+  song = {
+    title: '',
+    artist: '',
+    status: 'Neu'
+  };
+
+  addSong(): void {
+    console.log('Neuer Song:', this.song);
+  }
+}
