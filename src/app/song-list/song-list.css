@@ -22,3 +22,14 @@
   margin-right:7px;
   color:grey;
 }
+
+thead {
+  background-color: #070606;
+}
+
+td, th {
+  border: 1px solid white;
+  color: white;
+  background-color: #2a2a2a;
+}
+

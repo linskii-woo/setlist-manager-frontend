@@ -1,5 +1,5 @@
 body {
-    background-color:#000000;
+    background-color:#0c0118;
     color:white;
 }
 
@@ -15,4 +15,16 @@ h1, h2{
 
 .table {
     color:white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+h1, h2 {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+}
+
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    color: white;
 }
