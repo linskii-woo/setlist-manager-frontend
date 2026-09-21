@@ -6,5 +6,5 @@ import { SongEdit } from './song-edit/song-edit';
 export const routes: Routes = [
   { path: 'songs', component: SongList },
   { path: 'add', component: SongAdd },
-  { path: 'edit', component: SongEdit }
+  { path: 'edit/:id', component: SongEdit }
 ];

@@ -17,6 +17,14 @@ export class BackendService {
     return songs;
   }
 
+  // GET Song per ID
+async getOne(id: string): Promise<Song> {
+    let response = await fetch(this.apiURL + '/songs/' + id);
+    let song = await response.json();
+    console.log('song in service (getOne):', song);
+    return song;
+}
+
   // POST einen neuen Song
   async create(newSong: Song): Promise<Song> {
     let response = await fetch(this.apiURL + '/songs', {

@@ -15,7 +15,6 @@ export class SongAdd {
   private router = inject(Router);
 
   song: Song = {
-    _id: '',
     title: '',
     artist: '',
     status: 'Neu'

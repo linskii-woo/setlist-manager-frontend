@@ -3,21 +3,24 @@
 <form>
   <div class="mb-3">
     <label>Songname:</label>
-    <input type="text" class="form-control" value="{{ song.title }}">
+    <input type="text" class="form-control" [(ngModel)]="song.title" name = "title">
   </div>
   <div class="mb-3">
     <label>Künstler:</label>
-    <input type="text" class="form-control" value="{{ song.artist }}">
+    <input type="text" class="form-control" [(ngModel)]="song.artist" name="artist">
   </div>
   <div class="mb-3">
     <label>Status:</label>
-    <select class="form-control">
+    <select class="form-control" [(ngModel)]="song.status" name="status">
       <option value="Neu">Neu</option>
       <option value="In Arbeit">In Arbeit</option>
       <option value="Bereit">Bereit</option>
     </select>
   </div>
-  <button type="button" class="btn btn-success" (click)="updateSong()">
+  <button type="button" class="col-2 btn btn-lila" (click)="updateSong()">
     Änderung speichern
+  </button>
+  <button type="button" class="col-2 ms-2 btn btn-secondary" (click)="cancel()">
+    Abbrechen
   </button>
 </form>

@@ -1,0 +1,9 @@
+.btn-lila {
+  background-color:rgba(147, 112, 216, 0.863);
+  color:white;
+  border:none;
+}
+.btn-lila:hover {
+  background-color:rgb(142, 108, 210);
+  color:white;
+}
