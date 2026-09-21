@@ -17,7 +17,7 @@
         <td>{{ song.status }}</td>
         <td>
           <a routerLink="/edit" class="btn btn-lila btn-sm me-1">Bearbeiten</a>
-          <button class="btn btn-loeschen btn-sm">Löschen</button>
+          <button class="btn btn-loeschen btn-sm" (click)="delete(song._id!)">Löschen</button>
         </td>
       </tr>
     }

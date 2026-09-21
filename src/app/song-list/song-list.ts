@@ -16,13 +16,22 @@ export class SongList implements OnInit {
   private cdr = inject(ChangeDetectorRef);
   songs: Song[] = [];
 
-  async ngOnInit(): Promise<void> {
+   ngOnInit(): void {
     this.bs.getAll()
     .then( response => {
       this.songs = response;
       this.cdr.detectChanges();
     })
-      .then( songs => console.log('songs in SongLost:', songs))
+  }
+  delete(id: string): void {
+    this.bs.deleteOne(id)
+    .then( ()=> {
+      this.bs.getAll()
+      .then( response=> {
+        this.songs = response;
+        this.cdr.detectChanges();
+      })
+    })
   }
 }
 
