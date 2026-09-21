@@ -16,3 +16,9 @@
     background-color:rgba(132, 0, 0, 0.734);
     color:white;
 }
+
+.sortier-griff {
+  cursor:grab;
+  margin-right:7px;
+  color:grey;
+}

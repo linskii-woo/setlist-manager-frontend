@@ -1,7 +1,8 @@
-import { Component, inject, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, inject, OnInit, ChangeDetectorRef, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { BackendService } from '../shared/backend';
 import { Song } from '../shared/song';
+import Sortable from 'sortablejs';
 
 
 @Component({
@@ -26,7 +27,19 @@ export class SongList implements OnInit {
       this.songs = response;
       this.cdr.detectChanges();
     })
+    .then( () => {
+      setTimeout(() => {
+                console.log('setlistRef:', this.setlistRef);
+        if(this.setlistRef) {
+          Sortable.create(this.setlistRef.nativeElement,{
+            handle: '.sortier-griff',
+            animation:150
+          });
+        }
+      }, 100);
+    })
   }
+
   delete(id: string): void {
     this.bs.deleteOne(id)
     .then( ()=> {
@@ -37,11 +50,14 @@ export class SongList implements OnInit {
       })
     })
   }
+
+  @ViewChild('setlistRef') setlistRef!: ElementRef;
+
 }
 
 
 
 
 
-  
+
   
