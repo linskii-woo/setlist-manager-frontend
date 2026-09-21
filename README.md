@@ -1,59 +1,68 @@
-# Frontend
+# 🎼 Setlist Manager - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+Setlist Manager ist eine Platform zur Erstellung und Verwaltung von Setlisten für Musiker, Bands und DJs zum Planen von beispielsweise Konzerten. 
 
-## Development server
+Die App bietet an Songs zu einer Liste hinzuzufügen, Songs zu ändern und von der Liste zu löschen. 
 
-To start a local development server, run:
+Man kann für jeden Song wählen ob er neu, in Arbeit, oder bereit ist.
 
-```bash
+## Screenshots
+
+//screenshots
+
+## Features
+
+- 🎵 Songs hinzufügen ( Titel, Künstler und Status)
+- ✏️ Songs bearbeiten und löschen
+-    Status der Songs manuell wechseln (Neu, in Arbeit, Bereit)
+- 📋 Songs mit Status "Bereit" erscheinen automatisch in der Setlist
+- 🔀 Reihenfolge der Setlist per Drag & Drop veränderbar
+- 🎨 Modernes Dark-Theme Design
+
+## Installation
+
+- [Git](https://git-scm.com/downloads)
+- [Node.js](https://nodejs.org/en/download)
+- [Angular CLI](https://angular.dev/installation) 
+
+global installieren:  npm install -g @angular/cli
+
+## Repositories klonen
+
+git clone https://github.com/linskii/setlist-manager-backend.git
+git clone https://github.com/linskii/setlist-manager-frontend.git
+
+### Backend starten
+
+cd setlist-manager-backend
+npm install
+
+-> erstelle eine .env Datei:
+DB_CONNECTION = mongodb+srv://<username>:<passwort>@cluster0.mongodb.net
+DATABASE = setlist
+
+zum Starten vom Backend:
+node --watch server.js
+
+### Frontend starten
+
+cd setlist-manager-frontend
+npm install
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Anwendung öffnen
 
-## Code scaffolding
+Frontend: [http://localhost:4200](http://localhost:4200)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Technologien
 
-```bash
-ng generate component component-name
-```
+Frondend: Angular
+UI Framework: Bootstrap
+Drag&Drop: SortableJS
+Backend: Node.js mit Express
+Datenbank: MongoDB Atlas
+Sprache: TypeScript + JavaScript
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Verwendete KI-Werkzeuge
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Claude (Anthropic): SortableJS, Hover, Hilfe beim debugging (z.B.ChangeDetectorRef)
