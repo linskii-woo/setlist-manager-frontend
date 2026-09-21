@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, ChangeDetectorRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { BackendService } from '../shared/backend';
 import { Song } from '../shared/song';
@@ -13,13 +13,16 @@ import { Song } from '../shared/song';
 export class SongList implements OnInit {
 
   private bs = inject(BackendService);
+  private cdr = inject(ChangeDetectorRef);
   songs: Song[] = [];
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.bs.getAll()
-    .then( response => this.songs = response )
-    .then( songs => console.log('songs in SongList:', songs ))
-
+    .then( response => {
+      this.songs = response;
+      this.cdr.detectChanges();
+    })
+      .then( songs => console.log('songs in SongLost:', songs))
   }
 }
 
