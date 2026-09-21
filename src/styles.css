@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color:#000000;
+    color:white;
+}
+
+h1, h2{
+    color:white;
+}
+
+.form-control {
+    background-color: #31334f;
+    color:white;
+    border: 1px solid #250d62;
+}
+
+.table {
+    color:white;
+}
