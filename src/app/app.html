@@ -1,12 +1,15 @@
+@if (!isHome) {
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-<a class="navbar-brand" routerLink="/">🎼 Setlist Manager</a>    <div class="navbar-nav">
-      <a class="nav-link" routerLink="/songs">Alle Songs</a>
+  <a class="navbar-brand" routerLink="/">🎼 Setlist Manager</a>    
+  <div class="navbar-nav">
+      <a class="nav-link" routerLink="/songs">Songtabelle</a>
       <a class="nav-link" routerLink="/add">Song hinzufügen</a>
     </div>
   </div>
 </nav>
-
+}
 <div class="container mt-4">
   <router-outlet />
 </div>
