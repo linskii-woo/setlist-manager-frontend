@@ -16,6 +16,10 @@ export class SongList implements OnInit {
   private cdr = inject(ChangeDetectorRef);
   songs: Song[] = [];
 
+  get setlist(): Song[] {
+    return this.songs.filter(song => song.status === 'Bereit');
+  }
+
    ngOnInit(): void {
     this.bs.getAll()
     .then( response => {

@@ -1,3 +1,6 @@
+<div class="row">
+  <div class="col-12 col-md-7">
+
 <h2>Alle Songs</h2>
 
 <table class="table table-striped">
@@ -28,6 +31,20 @@
     }
   </tbody>
 </table>
+</div>
 
-
-    
+<div class="col-12 col-md-5">
+  <h2>🎵 Setlist</h2>
+  <ol id="setlist">
+    @for (song of setlist; track $index) {
+      <li>
+        <span class="sortier-griff">≡</span>
+        {{ song.title }} - {{ song.artist }}
+      </li>
+    }
+    @empty {
+      <p>Noch kein Song "Bereit"</p>
+    }
+  </ol>
+</div>
+</div>
