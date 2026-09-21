@@ -1,5 +1,5 @@
 body {
-    background-color:#0c0118;
+    background-color:#1a0e2b;
     color:white;
 }
 
@@ -27,4 +27,12 @@ h1, h2 {
 .navbar-brand {
     font-family: 'Dancing Script', cursive;
     color: white;
+}
+
+.navbar {
+    background-color: rgb(0, 0, 0) !important;
+}
+
+.nav-link {
+    color: white !important;
 }
