@@ -1,6 +1,7 @@
 body {
-    background-color:#1a0e2b;
-    color:white;
+    background-image: linear-gradient(135deg, #000000, #1a0a3a);
+    min-height: 100vh;
+    color: white;
 }
 
 h1, h2{
@@ -36,3 +37,6 @@ h1, h2 {
 .nav-link {
     color: white !important;
 }
+
+
+
