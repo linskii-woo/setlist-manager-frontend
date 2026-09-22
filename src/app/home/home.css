@@ -5,8 +5,16 @@
 
 .title {
     font-family: 'Dancing Script', cursive;
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: 700;
+    animation: slideUp 1.5s ease forwards;
+}
+
+.introtext {
+    font-size: 1rem;
+    color:rgb(78, 51, 102);
+    margin-bottom: 5rem;
+    margin-top: 1rem;
     animation: slideUp 1.5s ease forwards;
 }
 
