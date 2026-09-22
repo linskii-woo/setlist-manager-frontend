@@ -37,3 +37,11 @@ td, th {
   color:white;
   font-size: 1rem;
 }
+
+.btn-add-song {
+    font-size: 2rem;
+    color: white;
+    border: none;
+    padding: 0.1rem 1rem;
+    margin-top: 0.1rem;
+}

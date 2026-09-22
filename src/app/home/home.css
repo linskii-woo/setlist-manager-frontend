@@ -26,7 +26,7 @@
 }
 
 .btn-start {
-    background-color:rgba(92, 52, 105, 0.735);
+    background-color:rgba(78, 51, 102, 0.74);
     color:white;
     border: none;
     padding-left: 3rem;
@@ -34,7 +34,7 @@
 }
 
 .btn-start:hover {
-    background-color:rgb(92, 52, 105);
+    background-color:rgb(78, 51, 102);
     color:white;
 }
 
