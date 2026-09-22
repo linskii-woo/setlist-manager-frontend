@@ -25,6 +25,12 @@
     text-align: center;
 }
 
+.btn-start {
+    background-color:rgba(92, 52, 105, 0.735);
+    color:white;
+    border: 1px solid white;
+}
+
 .copyright {
     color:rgb(72, 72, 72);
     font-size: 0.7rem;
