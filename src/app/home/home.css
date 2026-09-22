@@ -28,7 +28,14 @@
 .btn-start {
     background-color:rgba(92, 52, 105, 0.735);
     color:white;
-    border: 1px solid white;
+    border: none;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.btn-start:hover {
+    background-color:rgb(92, 52, 105);
+    color:white;
 }
 
 .copyright {
