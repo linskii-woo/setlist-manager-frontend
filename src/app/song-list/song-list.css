@@ -24,13 +24,13 @@
 }
 
 thead {
-  background-color: #070606;
+  background-color: #000000;
 }
 
 td, th {
-  border: 1px solid white;
+  border: 1px solid rgb(32, 32, 32);
   color: white;
-  background-color: #2a2a2a;
+  background-color: #464646;
 }
 
 .bi {
