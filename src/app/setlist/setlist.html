@@ -1,0 +1,12 @@
+<h2>Meine Setlist</h2>
+<ol id="setlist" #setlistRef>
+    @for (song of setlist; track $index) {
+        <li>
+            <span class="sortier-griff">≡</span>
+            {{ song.title }} - {{ song.artist }}
+        </li>
+    }
+    @if (setlist.length === 0) {
+        <p>noch kein Song "Bereit"</p>
+    }
+</ol>
