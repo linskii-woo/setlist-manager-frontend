@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 body {
-    background-image: linear-gradient(135deg, #000000, #1a0a3a);
+    background-image: linear-gradient(135deg, #050505, #382264);
     min-height: 100vh;
     color: white;
 }
@@ -13,7 +13,7 @@ h1, h2{
 .form-control {
     background-color: #31334f;
     color:white;
-    border: 1px solid #250d62;
+    border: 1px solid #240c60;
 }
 
 .table {
