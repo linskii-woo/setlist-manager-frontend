@@ -26,6 +26,12 @@ thead {
   background-color: #000000;
 }
 
+td, th {
+  border: 1px solid rgb(48, 26, 99);
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
 .bi {
   color:white;
   font-size: 1rem;
