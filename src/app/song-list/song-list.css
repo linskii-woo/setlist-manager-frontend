@@ -16,12 +16,6 @@
     color:white;
 }
 
-.sortier-griff {
-  cursor:grab;
-  margin-right:7px;
-  color:grey;
-}
-
 thead {
   background-color: #000000;
 }
@@ -48,6 +42,7 @@ td, th {
 .row {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 100px;
     max-width: 3000px;
 }
 
