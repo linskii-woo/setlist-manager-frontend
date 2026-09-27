@@ -1,4 +1,4 @@
-# 🎼 Setlist Manager - Frontend
+# Setlist Manager - Frontend
 
 Setlist Manager ist eine Platform zur Erstellung und Verwaltung von Setlisten für Musiker, Bands und DJs zum Planen von beispielsweise Konzerten. 
 
@@ -8,16 +8,32 @@ Man kann für jeden Song wählen ob er neu, in Arbeit, oder bereit ist.
 
 ## Screenshots
 
-//screenshots
+### Startseite
+![Home](screenshots/homepage.png)
+
+### Übersicht aller Songs
+![Overview](screenshots/overview.png)
+
+### My Setlist
+![My Setlist](screenshots/my-setlist.png)
+
+### Song hinzufügen
+![Add Song](screenshots/add-song.png)
+
+### Song bearbeiten
+![Edit Song](screenshots/edit-song.png)
+
 
 ## Features
 
-- 🎵 Songs hinzufügen ( Titel, Künstler und Status)
-- ✏️ Songs bearbeiten und löschen
--    Status der Songs manuell wechseln (Neu, in Arbeit, Bereit)
-- 📋 Songs mit Status "Bereit" erscheinen automatisch in der Setlist
-- 🔀 Reihenfolge der Setlist per Drag & Drop veränderbar
-- 🎨 Modernes Dark-Theme Design
+- Songs hinzufügen ( Titel, Künstler und Status)
+- Songs bearbeiten und löschen
+- Filter nach Status (New, In Progress, Ready)
+- Songs mit Status "Ready" erscheinen automatisch in der Setlist
+- Reihenfolge der Setlist per Drag & Drop veränderbar
+- Notizen zwischen Songs in der Setlist hinterlegen
+- Anzeige der Gesamtdauer der Setlist
+- Design mit Farbüberlauf
 
 ## Installation
 
@@ -53,6 +69,7 @@ ng serve
 ### Anwendung öffnen
 
 Frontend: [http://localhost:4200](http://localhost:4200)
+ > das Backend muss dafür ebenfalls gestartet sein
 
 ## Technologien
 
@@ -65,4 +82,4 @@ Sprache: TypeScript + JavaScript
 
 ## Verwendete KI-Werkzeuge
 
-- Claude (Anthropic): SortableJS, Hover, Hilfe beim debugging (z.B.ChangeDetectorRef)
+- Claude (Anthropic): SortableJS (Drag&Drop), Hover, Bootstrap Icons, Technik mit "split(':') und reduce(), @Viewchild, Hilfe beim debugging (z.B.ChangeDetectorRef)
