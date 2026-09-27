@@ -17,7 +17,7 @@ export class SongEdit implements OnInit {
   private cdr = inject(ChangeDetectorRef);
 
   id: string | null = '';
-  song: Song = { title: '', artist: '', status: 'Neu' };
+  song: Song = { title: '', artist: '', status: 'New' };
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');

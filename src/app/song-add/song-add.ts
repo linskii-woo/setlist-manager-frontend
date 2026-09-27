@@ -17,7 +17,7 @@ export class SongAdd {
   song: Song = {
     title: '',
     artist: '',
-    status: 'Neu'
+    status: 'New'
   };
 
   addSong(): void {

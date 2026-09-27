@@ -17,7 +17,7 @@ songs: Song[] = [];
 @ViewChild('setlistRef') setlistRef!: ElementRef;
 
 get setlist(): Song[] {
-  return this.songs.filter(song => song.status === 'Bereit');
+  return this.songs.filter(song => song.status === 'Ready');
 }
 
 ngOnInit(): void {

@@ -19,12 +19,12 @@ export class SongList implements OnInit {
   songs: Song[] = [];
 
   get setlist(): Song[] {
-    return this.songs.filter(song => song.status === 'ready');
+    return this.songs.filter(song => song.status === 'Ready');
   }
 
-  selectedStatus: string='all';
+  selectedStatus: string='All';
   get filteredSongs(): Song[] {
-    if(this.selectedStatus === 'all') {
+    if(this.selectedStatus === 'All') {
       return this.songs;
     }
     return this.songs.filter(song => song.status === this.selectedStatus);
