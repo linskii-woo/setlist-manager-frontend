@@ -1,0 +1,42 @@
+.note-add {
+  margin-left: 1.7rem;
+  font-size: 1rem;
+  color: rgb(152, 152, 152);
+  cursor: pointer;
+}
+
+.note-input {
+  max-width: 250px;   
+  width: 100%;
+}
+
+.btn-save-note {
+  background-color: rgb(84, 37, 179);  
+  color: white;
+  border: none;
+}
+
+.btn-save-note,
+.btn-secondary {
+  margin-top: 0.5rem;
+}
+
+.note-display {
+  margin-left: 1.7rem;
+  font-size: 0.7rem;
+  color: rgb(152, 152, 152);
+  cursor: pointer;
+}
+
+.btn-save-note:hover {
+  background-color: rgba(84, 37, 179, 0.715);
+  border:none;
+}
+
+.btn-secondary {
+  margin-left: 0.5rem;   
+}
+
+.summary {
+    color: rgb(152, 152, 152);
+}

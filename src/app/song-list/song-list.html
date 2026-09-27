@@ -1,13 +1,14 @@
-  <div class="row">
-  <div class="col-12 col-md-10 text-center mx-auto">
+<div class="row">
+<div class="col-12 col-md-10 text-center mx-auto">
 
 <h2 class="titel">Overview</h2>
-
+<span class="summary">{{ filteredSongs.length }} Songs · {{ totalDurationDisplay }}</span>
 <table class="table table-striped">
   <thead>
     <tr>
       <th>Song</th>
       <th>Artist</th>
+      <th>Duration</th>
       <th>Status</th>
       <th>Edit</th>
     </tr>
@@ -17,6 +18,7 @@
       <tr>
         <td>{{ song.title }}</td>
         <td>{{ song.artist }}</td>
+        <td>{{ song.duration || '–' }}</td>
         <td>{{ song.status }}</td>
         <td>
           <a [routerLink]="['/edit', song._id]" class="btn btn-lila btn-sm me-1">
@@ -30,7 +32,7 @@
     }
     @empty {
       <tr>
-        <td colspan="4">no songs found</td>
+        <td colspan="5">no songs found</td>
       </tr>
     }
   </tbody>

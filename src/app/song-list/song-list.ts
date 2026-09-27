@@ -30,6 +30,29 @@ export class SongList implements OnInit {
     return this.songs.filter(song => song.status === this.selectedStatus);
   }
 
+  get totalDurationDisplay(): string {
+    const totalSeconds = this.filteredSongs.reduce((sum, song) => {
+      return sum + this.parseDuration(song.duration);
+    }, 0);
+    return this.formatDuration(totalSeconds);
+  }
+
+  private parseDuration(duration?: string): number {
+    if (!duration) return 0;
+    const parts = duration.split(':');
+    if (parts.length !== 2) return 0;
+    const minutes = Number(parts[0]);
+    const seconds = Number(parts[1]);
+    if (isNaN(minutes) || isNaN(seconds)) return 0;
+    return minutes * 60 + seconds;
+  }
+
+  private formatDuration(totalSeconds: number): string {
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  }
+
    ngOnInit(): void {
     this.bs.getAll()
     .then( response => {

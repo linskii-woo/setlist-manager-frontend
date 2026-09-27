@@ -1,9 +1,24 @@
 <h2>My Setlist</h2>
+<span class="summary">{{ setlist.length }} Songs · {{ totalDurationDisplay }}</span>
 <ol id="setlist" #setlistRef>
     @for (song of setlist; track $index) {
         <li>
+            <div class="song-row">
             <span class="sortier-griff">≡</span>
             {{ song.title }} - {{ song.artist }}
+            <span class="song-duration">{{ song.duration }}</span>
+        </div>
+        @if (editingNoteId === song._id) {
+        <div class="note-edit">
+          <input type="text" class="form-control form-control-sm" [(ngModel)]="noteDraft">
+          <button class="btn btn-sm btn-save-note" (click)="saveNote(song)">Save Changes</button>
+          <button class="btn btn-sm btn-secondary" (click)="cancelEditNote()">Cancel</button>
+        </div>
+      } @else if (song.note) {
+        <div class="note-display" (click)="startEditNote(song)">↳ {{ song.note }}</div>
+      } @else {
+        <div class="note-add" (click)="startEditNote(song)">+ Add Note</div>
+      }
         </li>
     }
     @if (setlist.length === 0) {
