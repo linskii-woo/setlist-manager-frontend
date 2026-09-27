@@ -3,4 +3,6 @@ export interface Song {
   title: string;
   artist: string;
   status: string;
+  duration?: string;
+  note?: string;
 }
