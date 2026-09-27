@@ -71,6 +71,11 @@ ng serve
 Frontend: [http://localhost:4200](http://localhost:4200)
  > das Backend muss dafür ebenfalls gestartet sein
 
+## Deployment
+
+Das Projekt ist als App erreichbar unter:
+https://setlist-manager-frontend-nine.vercel.app 
+
 ## Technologien
 
 Frondend: Angular
