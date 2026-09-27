@@ -3,11 +3,12 @@ import { RouterLink } from '@angular/router';
 import { BackendService } from '../shared/backend';
 import { Song } from '../shared/song';
 import Sortable from 'sortablejs';
-
+import { FormsModule } from '@angular/forms';
+ 
 
 @Component({
   selector: 'app-song-list',
-  imports: [RouterLink],
+  imports: [RouterLink, FormsModule],
   templateUrl: './song-list.html',
   styleUrl: './song-list.css'
 })
@@ -18,7 +19,15 @@ export class SongList implements OnInit {
   songs: Song[] = [];
 
   get setlist(): Song[] {
-    return this.songs.filter(song => song.status === 'Bereit');
+    return this.songs.filter(song => song.status === 'ready');
+  }
+
+  selectedStatus: string='all';
+  get filteredSongs(): Song[] {
+    if(this.selectedStatus === 'all') {
+      return this.songs;
+    }
+    return this.songs.filter(song => song.status === this.selectedStatus);
   }
 
    ngOnInit(): void {
@@ -29,7 +38,7 @@ export class SongList implements OnInit {
     })
     .then( () => {
       setTimeout(() => {
-                console.log('setlistRef:', this.setlistRef);
+        console.log('setlistRef:', this.setlistRef);
         if(this.setlistRef) {
           Sortable.create(this.setlistRef.nativeElement,{
             handle: '.sortier-griff',

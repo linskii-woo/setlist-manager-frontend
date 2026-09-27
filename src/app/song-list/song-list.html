@@ -13,7 +13,7 @@
     </tr>
   </thead>
   <tbody>
-    @for (song of songs; track $index) {
+    @for (song of filteredSongs; track $index) {
       <tr>
         <td>{{ song.title }}</td>
         <td>{{ song.artist }}</td>
@@ -35,6 +35,13 @@
     }
   </tbody>
 </table>
+<select class="filter-select" [(ngModel)]="selectedStatus">
+  <option value="all">all</option>
+  <option value="new">new</option>
+  <option value="in progress">in progress</option>
+  <option value="ready">ready</option>
+</select>
+<br>
 <a routerLink="/add" class="btn btn-add-song">+ Add Song</a>
 <a routerLink="/setlist" class="btn btn-setlist">✓ Complete</a>
 </div>
