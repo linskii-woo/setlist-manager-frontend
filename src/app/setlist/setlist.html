@@ -1,4 +1,4 @@
-<h2>Meine Setlist</h2>
+<h2>My Setlist</h2>
 <ol id="setlist" #setlistRef>
     @for (song of setlist; track $index) {
         <li>
@@ -7,6 +7,6 @@
         </li>
     }
     @if (setlist.length === 0) {
-        <p>noch kein Song "Bereit"</p>
+        <p>no songs ready yet</p>
     }
 </ol>
