@@ -1,5 +1,5 @@
 .btn-lila {
-  color:white;
+  color:rgb(255, 255, 255);
   border:none;
 }
 .btn-lila:hover {
@@ -7,23 +7,24 @@
   color:white;
 }
 .btn-loeschen {
-  
-  color:white;
+  color:rgb(255, 255, 255);
   border:none;
 }
+
 .btn-loeschen:hover {
   background-color:rgba(132, 0, 0, 0.335);
-  color:white;
+  color:rgb(255, 255, 255);
+}
+
+td, th {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(64, 46, 144);
+  background-color: rgb(0, 0, 0);
 }
 
 thead {
   background-color: #000000;
-}
-
-td, th {
-  color: white;
-  border: 1px solid rgb(48, 26, 99);
-  background-color: rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
 }
 
 .bi {
@@ -34,9 +35,16 @@ td, th {
 .btn-add-song {
   font-size: 1rem;
   color: rgb(214, 214, 214);
+  background-color:rgba(76, 52, 182, 0.673); 
   border: none;
-  padding: 0.1rem 1rem;
+  padding: 0.3rem 1rem;
   margin-top: 0.1rem;
+  margin-right: 0.5rem;
+}
+
+.btn-add-song:hover {
+  background-color: rgb(76, 52, 182);
+  border:none;
 }
 
 .row {
@@ -48,8 +56,16 @@ td, th {
 
 .btn-setlist {
   color:white;
+  background-color:rgba(76, 52, 182, 0.673);
   padding: 0.3rem 1rem;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
+  border:none;
+  font-size: 1rem;
+  margin-top: 0.1rem;
+}
+
+.btn-setlist:hover {
+  background-color: rgb(75, 52, 182);
   border:none;
 }
 
@@ -60,10 +76,10 @@ td, th {
 }
 
 .filter-select {
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
   margin-top: 1rem;
   color:white;
-  background-color:rgb(75, 52, 182);
+  background-color:rgba(76, 52, 182, 0.673);
   border:none;
   padding: 0.3rem 1rem;
 }

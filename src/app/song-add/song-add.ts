@@ -23,4 +23,9 @@ export class SongAdd {
   addSong(): void {
     this.bs.create(this.song)
     .then( () => this.router.navigate(['/songs']))  }
+
+cancel(): void {
+    this.router.navigate(['/songs']);
 }
+}
+

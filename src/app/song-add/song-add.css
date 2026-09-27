@@ -1,10 +1,10 @@
 .btn-add {
-    background-color:rgba(55, 106, 224, 0.842);
+    background-color:rgb(84, 37, 179);
     color:white;
     border:none;
 }
 
 .btn-add:hover {
-    background-color:rgb(60, 99, 191);
+    background-color:rgba(84, 37, 179, 0.709);
     color:white;
 }
